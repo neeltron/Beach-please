@@ -10,6 +10,7 @@ from picamera import PiCamera
 from time import sleep
 
 camera = PiCamera()
+camera.rotation = 180
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(33, GPIO.OUT)
