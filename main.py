@@ -82,12 +82,14 @@ camera.capture('a.jpg')
 
 
 while True:
-    p.ChangeDutyCycle(5)
-    sleep(0.5)
-    p.ChangeDutyCycle(12.5)
-    sleep(0.5)
-    p.ChangeDutyCycle(2.5)
-    sleep(0.5)
+# =============================================================================
+#     p.ChangeDutyCycle(5)
+#     sleep(0.5)
+#     p.ChangeDutyCycle(12.5)
+#     sleep(0.5)
+#     p.ChangeDutyCycle(2.5)
+#     sleep(0.5)
+# =============================================================================
     
     detect2 = detect("a.jpg")
     for i in detect2:
@@ -105,43 +107,4 @@ while True:
     stop()
     sleep(1)
     camera.capture("a.jpg")
-    detect3 = detect("a.jpg")
-    for i in detect3:
-        if i.description == "Plastic":
-            p.ChangeDutyCycle(12.5)
-            forward()
-            sleep(0.5)
-            stop()
-        else:
-            break
-        
-    left()
-    sleep(0.5)
-    stop()
-    sleep(1)
-    camera.capture("a.jpg")
-    detect4 = detect("a.jpg")
-    for i in detect4:
-        if i.description == "Plastic":
-            p.ChangeDutyCycle(12.5)
-            forward()
-            sleep(0.5)
-            stop()
-        else:
-            break
-    
-    left()
-    sleep(0.5)
-    stop()
-    sleep(1)
-    camera.capture("a.jpg")
-    detect5 = detect("a.jpg")
-    for i in detect5:
-        if i.description == "Plastic":
-            p.ChangeDutyCycle(12.5)
-            forward()
-            sleep(0.5)
-            stop()
-        else:
-            break
     
