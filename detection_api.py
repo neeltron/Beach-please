@@ -5,6 +5,9 @@ Created on Sat Jun 12 19:20:46 2021
 @author: Neel
 """
 
+import os
+import io
+
 def detect(img):
     from google.cloud import vision
     client = vision.ImageAnnotatorClient()
