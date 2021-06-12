@@ -97,4 +97,19 @@ while True:
             forward()
             sleep(0.5)
             stop()
-            
+        else:
+            break
+        
+    left()
+    sleep(0.5)
+    camera.capture("a.jpg")
+    detect = detect("a.jpg")
+    for i in detect:
+        if i.description == "Plastic":
+            p.ChangeDutyCycle(12.5)
+            forward()
+            sleep(0.5)
+            stop()
+        else:
+            break
+    
