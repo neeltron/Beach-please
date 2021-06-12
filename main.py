@@ -9,6 +9,8 @@ import RPi.GPIO as GPIO
 from picamera import PiCamera
 from time import sleep
 
+camera = PiCamera()
+
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(13, GPIO.OUT)
 GPIO.setup(15, GPIO.OUT)
