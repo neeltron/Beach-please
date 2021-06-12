@@ -10,8 +10,8 @@ from picamera import PiCamera
 from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(13, GPIO.OUT)
-GPIO.setup(15, GPIO.OUT)
+GPIO.setup(33, GPIO.OUT)
+GPIO.setup(10, GPIO.OUT)
 GPIO.setup(5, GPIO.OUT)
 GPIO.setup(29, GPIO.OUT)
 
@@ -20,8 +20,8 @@ sleep(5)
 camera.capture('a.jpg')
 
 while True:
-    GPIO.output(13, 0)
-    GPIO.output(15, 1)
+    GPIO.output(33, 0)
+    GPIO.output(10, 1)
     GPIO.output(5, 1)
     GPIO.output(29, 0)
 # =============================================================================
