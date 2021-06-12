@@ -26,6 +26,42 @@ def detect(img):
     labels = response.label_annotations
     return labels
 
+
+def forward():
+    GPIO.output(33, 1)
+    GPIO.output(10, 0)
+    GPIO.output(5, 1)
+    GPIO.output(29, 0)
+
+
+def stop():
+    GPIO.output(33, 0)
+    GPIO.output(10, 0)
+    GPIO.output(5, 0)
+    GPIO.output(29, 0)
+    
+    
+def left():
+    GPIO.output(33, 0)
+    GPIO.output(10, 1)
+    GPIO.output(5, 1)
+    GPIO.output(29, 0)
+    
+
+def right():
+    GPIO.output(33, 1)
+    GPIO.output(10, 0)
+    GPIO.output(5, 0)
+    GPIO.output(29, 1)
+    
+
+def back():
+    GPIO.output(33, 0)
+    GPIO.output(10, 1)
+    GPIO.output(5, 0)
+    GPIO.output(29, 1)
+    
+
 camera = PiCamera()
 camera.rotation = 180
 
@@ -50,48 +86,15 @@ while True:
     sleep(0.5)
     p.ChangeDutyCycle(2.5)
     sleep(0.5)
-    # Stop
-# =============================================================================
-#     GPIO.output(33, 0)
-#     GPIO.output(10, 0)
-#     GPIO.output(5, 0)
-#     GPIO.output(29, 0)
-# =============================================================================
-
-    # Forward
-# =============================================================================
-#     GPIO.output(33, 1)
-#     GPIO.output(10, 0)
-#     GPIO.output(5, 1)
-#     GPIO.output(29, 0)
-# =============================================================================
     
-    # Backward
-# =============================================================================
-#     GPIO.output(33, 0)
-#     GPIO.output(10, 1)
-#     GPIO.output(5, 0)
-#     GPIO.output(29, 1)
-# =============================================================================
-    
-    # Left
-# =============================================================================
-#     GPIO.output(33, 0)
-#     GPIO.output(10, 1)
-#     GPIO.output(5, 1)
-#     GPIO.output(29, 0)
-# =============================================================================
+    forward()
 
-    # Right
-    GPIO.output(33, 1)
-    GPIO.output(10, 0)
-    GPIO.output(5, 0)
-    GPIO.output(29, 1)
-        
-# =============================================================================
-#     sleep(5)
-#     GPIO.output(13, 0)
-#     GPIO.output(15, 0)
-#     GPIO.output(5, 0)
-#     GPIO.output(29, 0)
-# =============================================================================
+    detect = detect("a.jpg")
+    for i in detect:
+        print(i.description)
+        if i.description == "Plastic":
+            p.ChangeDutyCycle(12.5)
+            forward()
+            sleep(0.5)
+            stop()
+            
