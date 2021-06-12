@@ -99,6 +99,7 @@ while True:
             forward()
             sleep(0.5)
             stop()
+            p.ChangeDutyCycle(2.5)
         else:
             break
         
