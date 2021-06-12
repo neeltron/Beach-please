@@ -17,12 +17,32 @@ GPIO.setup(33, GPIO.OUT)
 GPIO.setup(10, GPIO.OUT)
 GPIO.setup(5, GPIO.OUT)
 GPIO.setup(29, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
+
+p = GPIO.PWM(servoPIN, 50)
+p.start(2.5)
 
 camera.start_preview()
 sleep(5)
 camera.capture('a.jpg')
 
 while True:
+    p.ChangeDutyCycle(5)
+    sleep(0.5)
+    p.ChangeDutyCycle(7.5)
+    sleep(0.5)
+    p.ChangeDutyCycle(10)
+    sleep(0.5)
+    p.ChangeDutyCycle(12.5)
+    sleep(0.5)
+    p.ChangeDutyCycle(10)
+    sleep(0.5)
+    p.ChangeDutyCycle(7.5)
+    sleep(0.5)
+    p.ChangeDutyCycle(5)
+    sleep(0.5)
+    p.ChangeDutyCycle(2.5)
+    sleep(0.5)
     # Stop
 # =============================================================================
 #     GPIO.output(33, 0)
