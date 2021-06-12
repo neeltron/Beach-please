@@ -61,6 +61,15 @@ def back():
     GPIO.output(5, 0)
     GPIO.output(29, 1)
     
+    
+def servoAngle(angle):
+	duty = angle / 18 + 2
+	GPIO.output(11, True)
+	p.ChangeDutyCycle(duty)
+	sleep(1)
+	GPIO.output(11, False)
+	p.ChangeDutyCycle(0)
+    
 
 camera = PiCamera()
 camera.rotation = 180
@@ -74,7 +83,7 @@ GPIO.setup(29, GPIO.OUT)
 GPIO.setup(11, GPIO.OUT)
 
 p = GPIO.PWM(11, 50)
-p.start(2.5)
+p.start(0)
 
 camera.start_preview()
 sleep(5)
@@ -95,11 +104,11 @@ while True:
     for i in detect2:
         print(i.description)
         if i.description == "Automotive lighting":
-            p.ChangeDutyCycle(12.5)
+            servoAngle(90)
             forward()
             sleep(0.5)
             stop()
-            p.ChangeDutyCycle(2.5)
+            servoAngle(0)
         else:
             break
         
