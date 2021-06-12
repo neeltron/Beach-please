@@ -100,6 +100,15 @@ while True:
             sleep(1)
             stop()
             servoAngle(90)
+            right()
+            sleep(0.5)
+            forward()
+            sleep(1)
+            servoAngle(0)
+            back()
+            sleep(0.5)
+            right()
+            sleep(0.5)
         else:
             break
         
