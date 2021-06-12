@@ -88,7 +88,7 @@ while True:
     sleep(0.5)
     
     forward()
-
+    
     detect = detect("a.jpg")
     for i in detect:
         print(i.description)
@@ -102,6 +102,7 @@ while True:
         
     left()
     sleep(0.5)
+    stop()
     camera.capture("a.jpg")
     detect = detect("a.jpg")
     for i in detect:
