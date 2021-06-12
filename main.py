@@ -23,8 +23,8 @@ camera.capture('a.jpg')
 
 while True:
     GPIO.output(33, 0)
-    GPIO.output(10, 1)
-    GPIO.output(5, 1)
+    GPIO.output(10, 0)
+    GPIO.output(5, 0)
     GPIO.output(29, 0)
 # =============================================================================
 #     sleep(5)
