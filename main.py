@@ -91,24 +91,15 @@ camera.capture('a.jpg')
 
 
 while True:
-# =============================================================================
-#     p.ChangeDutyCycle(5)
-#     sleep(0.5)
-#     p.ChangeDutyCycle(12.5)
-#     sleep(0.5)
-#     p.ChangeDutyCycle(2.5)
-#     sleep(0.5)
-# =============================================================================
-    
     detect2 = detect("a.jpg")
     for i in detect2:
         print(i.description)
         if i.description == "Automotive lighting":
-            servoAngle(90)
-            forward()
-            sleep(0.5)
-            stop()
             servoAngle(0)
+            forward()
+            sleep(1)
+            stop()
+            servoAngle(90)
         else:
             break
         
