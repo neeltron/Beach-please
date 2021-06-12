@@ -104,11 +104,17 @@ while True:
             sleep(0.5)
             forward()
             sleep(1)
+            stop()
             servoAngle(0)
+            sleep(1)
             back()
             sleep(0.5)
+            stop()
+            sleep(1)
             right()
             sleep(0.5)
+            stop()
+            sleep(1)
         else:
             break
         
