@@ -102,6 +102,8 @@ while True:
             servoAngle(90)
             right()
             sleep(0.5)
+            stop()
+            sleep(1)
             forward()
             sleep(1)
             stop()
