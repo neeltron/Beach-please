@@ -36,7 +36,7 @@ GPIO.setup(5, GPIO.OUT)
 GPIO.setup(29, GPIO.OUT)
 GPIO.setup(11, GPIO.OUT)
 
-p = GPIO.PWM(servoPIN, 50)
+p = GPIO.PWM(11, 50)
 p.start(2.5)
 
 camera.start_preview()
