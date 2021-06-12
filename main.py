@@ -15,6 +15,8 @@ try:
 	while True:
 		GPIO.output(13, 0)
 		GPIO.output(15, 1)
+        GPIO.output(17, 0)
+		GPIO.output(27, 1)
 
 except KeyboardInterrupt:
 	GPIO.cleanup()
