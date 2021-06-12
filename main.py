@@ -65,6 +65,7 @@ def back():
 camera = PiCamera()
 camera.rotation = 180
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(33, GPIO.OUT)
 GPIO.setup(10, GPIO.OUT)
@@ -79,6 +80,7 @@ camera.start_preview()
 sleep(5)
 camera.capture('a.jpg')
 
+
 while True:
     p.ChangeDutyCycle(5)
     sleep(0.5)
@@ -86,8 +88,6 @@ while True:
     sleep(0.5)
     p.ChangeDutyCycle(2.5)
     sleep(0.5)
-    
-    forward()
     
     detect = detect("a.jpg")
     for i in detect:
@@ -103,6 +103,7 @@ while True:
     left()
     sleep(0.5)
     stop()
+    sleep(1)
     camera.capture("a.jpg")
     detect = detect("a.jpg")
     for i in detect:
@@ -117,6 +118,7 @@ while True:
     left()
     sleep(0.5)
     stop()
+    sleep(1)
     camera.capture("a.jpg")
     detect = detect("a.jpg")
     for i in detect:
@@ -131,6 +133,7 @@ while True:
     left()
     sleep(0.5)
     stop()
+    sleep(1)
     camera.capture("a.jpg")
     detect = detect("a.jpg")
     for i in detect:
