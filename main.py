@@ -94,7 +94,7 @@ while True:
     detect2 = detect("a.jpg")
     for i in detect2:
         print(i.description)
-        if i.description == "Drinkware":
+        if i.description == "Automotive Lighting":
             p.ChangeDutyCycle(12.5)
             forward()
             sleep(0.5)
