@@ -13,6 +13,7 @@ When we picture ourselves at the seaside on vacation, we imagine a clean seashor
 + Google Cloud Account
 
 ## Installation
+Check out <a href = "https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up">this guide</a> to set up your Raspberry Pi.<br>
 Raspberry Pi GPIO Library:
 ```
 pip install RPi.GPIO
