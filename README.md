@@ -41,10 +41,11 @@ pip3 install google
 ```
 pip3 install google-cloud-vision`
 ```
-## Citations
-https://cloud.google.com/vision/automl/object-detection/docs<br>
-https://devpost.com/software/smartbin-qkcliw
 
 ## Future Scope
 
 In the future, we are planning to upgrade our rover with a trash bin detection capability which will allow the garbage to be gathered near a dustbin/trashcan or put the trash inside that. We will also add a web portal to our project, which will allow us to control the rover in a semi-autonomous configuration. In the web portal, there will be buttons to allow the user to communicate with the rover. Further, we will be improving the architecture of the rover as well, so that it can pick up multiple trash at once, which will reduce the number of turns it has to take to reach the dustbin/trashcan, hence improving the rover's efficiency.
+
+## Citations
+https://cloud.google.com/vision/automl/object-detection/docs<br>
+https://devpost.com/software/smartbin-qkcliw
