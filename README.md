@@ -21,6 +21,29 @@ Raspberry Pi GPIO Library:
 pip install RPi.GPIO
 ```
 
+## Installation
+Check out <a href = "https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up">this guide</a> to set up your Raspberry Pi.<br>
+Raspberry Pi GPIO Library:
+```
+pip3 install RPi.GPIO
+```
+Raspberry Pi Camera Module:
+```
+pip3 install picamera
+```
+Google Cloud Libraries:
+```
+pip3 install google-cloud
+```
+```
+pip3 install google
+```
+```
+pip3 install google-cloud-vision`
+```
+## Citations
+https://cloud.google.com/vision/automl/object-detection/docs<br>
+https://devpost.com/software/smartbin-qkcliw
 
 ## Future Scope
 
