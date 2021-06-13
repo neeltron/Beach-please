@@ -106,7 +106,7 @@ while True:
     detect2 = detect("a.jpg")
     for i in detect2:
         print(i.description)
-        if i.description == "Automotive lighting":
+        if i.description == "Plastic" or i.description == "Lead":
             servoAngle(0)
             forward()
             sleep(1)
