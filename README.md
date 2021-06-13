@@ -14,12 +14,6 @@ The automated smart rover built by us moves around the beach to identify and pic
 + Chassis
 + Google Cloud Account
 
-## Installation
-Check out <a href = "https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up">this guide</a> to set up your Raspberry Pi.<br>
-Raspberry Pi GPIO Library:
-```
-pip install RPi.GPIO
-```
 
 ## Installation
 Check out <a href = "https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up">this guide</a> to set up your Raspberry Pi.<br>
